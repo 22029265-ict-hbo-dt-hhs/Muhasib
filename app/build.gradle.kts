@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.muhasib"
-        minSdk = 33
+        minSdk = 31
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -32,6 +32,10 @@ android {
 }
 
 dependencies {
+    val room_version = "2.6.1"
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+    androidTestImplementation("androidx.room:room-compiler:$room_version")
 
     implementation(libs.appcompat)
     implementation(libs.material)
